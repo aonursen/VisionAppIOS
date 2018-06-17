@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		1D45B31C20456F870023AD7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D45B31B20456F870023AD7A /* AppDelegate.swift */; };
-		1D45B31E20456F870023AD7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D45B31D20456F870023AD7A /* ViewController.swift */; };
+		1D45B31E20456F870023AD7A /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D45B31D20456F870023AD7A /* CameraVC.swift */; };
 		1D45B32120456F870023AD7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D45B31F20456F870023AD7A /* Main.storyboard */; };
 		1D45B32320456F870023AD7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D45B32220456F870023AD7A /* Assets.xcassets */; };
 		1D45B32620456F870023AD7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D45B32420456F870023AD7A /* LaunchScreen.storyboard */; };
+		1DB84F1D2045845A00C45ABF /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB84F1C2045845A00C45ABF /* ShadowView.swift */; };
+		1DB84F1F2045852B00C45ABF /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB84F1E2045852B00C45ABF /* RoundedButton.swift */; };
+		1DB84F212045AB4B00C45ABF /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1DB84F202045AB4B00C45ABF /* SqueezeNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D45B31820456F870023AD7A /* VisionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D45B31B20456F870023AD7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D45B31D20456F870023AD7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D45B31D20456F870023AD7A /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		1D45B32020456F870023AD7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D45B32220456F870023AD7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D45B32520456F870023AD7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D45B32720456F870023AD7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DB84F1C2045845A00C45ABF /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		1DB84F1E2045852B00C45ABF /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		1DB84F202045AB4B00C45ABF /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		1D45B31A20456F870023AD7A /* VisionApp */ = {
 			isa = PBXGroup;
 			children = (
+				1D45B33020456FC80023AD7A /* Resources */,
+				1D45B32F20456FB80023AD7A /* Model */,
+				1D45B32E20456FB40023AD7A /* View */,
+				1D45B32D20456FA70023AD7A /* Controller */,
 				1D45B31B20456F870023AD7A /* AppDelegate.swift */,
-				1D45B31D20456F870023AD7A /* ViewController.swift */,
 				1D45B31F20456F870023AD7A /* Main.storyboard */,
 				1D45B32220456F870023AD7A /* Assets.xcassets */,
 				1D45B32420456F870023AD7A /* LaunchScreen.storyboard */,
 				1D45B32720456F870023AD7A /* Info.plist */,
 			);
 			path = VisionApp;
+			sourceTree = "<group>";
+		};
+		1D45B32D20456FA70023AD7A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D45B31D20456F870023AD7A /* CameraVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1D45B32E20456FB40023AD7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DB84F1C2045845A00C45ABF /* ShadowView.swift */,
+				1DB84F1E2045852B00C45ABF /* RoundedButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D45B32F20456FB80023AD7A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D45B33020456FC80023AD7A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1DB84F202045AB4B00C45ABF /* SqueezeNet.mlmodel */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +177,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D45B31E20456F870023AD7A /* ViewController.swift in Sources */,
+				1DB84F1D2045845A00C45ABF /* ShadowView.swift in Sources */,
+				1D45B31E20456F870023AD7A /* CameraVC.swift in Sources */,
+				1DB84F212045AB4B00C45ABF /* SqueezeNet.mlmodel in Sources */,
 				1D45B31C20456F870023AD7A /* AppDelegate.swift in Sources */,
+				1DB84F1F2045852B00C45ABF /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FXPSE4XM9X;
 				INFOPLIST_FILE = VisionApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LiniaTech.VisionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FXPSE4XM9X;
 				INFOPLIST_FILE = VisionApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LiniaTech.VisionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
